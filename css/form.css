@@ -1,0 +1,102 @@
+input[type=text], 
+input[type=email]  {
+   display: block;
+   height: 48px;
+   padding: 15px 20px;
+   background-color: #fff;
+   font-size: 14px; 
+   border: 1px solid transparent;
+   width: 100%;
+   margin: 0 0 30px;
+   font-family: 'Work Sans', sans-serif;
+}
+
+input[type=text]:focus {
+   outline: none;
+   border: 1px solid #ccc;
+}
+input[type=text]:active {
+   outline: none;
+   border: 1px solid #ccc;
+}
+input[type=text]:hover {
+   outline: none;
+   opacity: 0.8;
+}
+
+input[type=text]::placeholder {
+   font-size: 14px;
+   color: #858585;
+}
+
+input[type=email]:focus {
+   outline: none;
+   border: 1px solid #ccc;
+}
+input[type=email]:active {
+   outline: none;
+   border: 1px solid #ccc;
+}
+input[type=email]:hover {
+   outline: none;
+   opacity: 0.8;
+}
+
+input[type=email]::placeholder {
+   font-size: 14px;
+   color: #858585;
+}
+
+textarea {
+   display: block;
+   height: 170px;
+   padding: 15px 20px;
+   background-color: #fff;
+   font-size: 14px;
+   outline: none;
+   border: 1px solid transparent;
+   width: 100%;
+   font-family: 'Work Sans', sans-serif;
+   margin: 0 0 30px;
+   resize: none;
+}
+
+textarea:focus {
+   outline: none;
+   border: 1px solid #ccc;
+}
+textarea:active {
+   outline: none;
+   border: 1px solid #ccc;
+}
+textarea:hover {
+   outline: none;
+   opacity: 0.8;
+}
+
+textarea::placeholder {
+   font-size: 14px;
+   color: #858585;
+}
+
+input[type=submit]{
+   max-width: 180px;
+   width: 100%;
+   display: block;
+   border: none;
+   outline: none;
+   color: #fff;
+   font-size: 14px;
+   text-transform: uppercase;
+   background-color: #252525;
+   padding: 20px 10px;
+   font-family: 'Work Sans', sans-serif;
+}
+
+input[type=submit]:hover {
+   opacity: 0.8;
+   cursor: pointer;
+}
+
+
+
