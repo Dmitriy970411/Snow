@@ -124,7 +124,7 @@ $(function () {
     let elementOffset = $(elementId).offset().top;
 
     nav.removeClass("show");
-    $("html, body").removeClass("no-scroll");
+    // $("html, body").removeClass("no-scroll");
 
 
     $("html, body").animate({
@@ -132,26 +132,25 @@ $(function () {
     }, 700);
   });
 
+  var menu = (".menu");
+
   navToggle.on("click", function (event) {
     event.preventDefault();
     $("#nav").toggleClass("show");
-    $("html, body").toggleClass("no-scroll");
+    // $("html, body").toggleClass("no-scroll");
    
-   
-    if (nav + (".show")) {
-      window.addEventListener("scroll", preventMotion, true);
-      window.addEventListener("touchmove", preventMotion, true);
-    } else {
-      window.addEventListener("scroll", preventMotion, false);
-      window.addEventListener("touchmove", preventMotion, false);
+    if (!$(this).hasClass('active-toggle')) { // если класса нет
+      $(this).addClass('active-toggle')
+      $('body, html').css('overflow-y', 'hidden');
+      $('html, body').animate({
+        scrollTop:0
+    }, 0); // добавляем класс
 
-      function preventMotion(event) {
-        window.scrollTo(0, 0);
-        event.preventDefault();
-        event.stopPropagation();
-      }
-
-    };
+    } else { // если есть
+      $(this).removeClass('active-toggle'); // убираем класс
+      $('body, html').css('overflow-y', ' ');
+      $('body, html').removeAttr( 'style' ); // код для второго клика
+    }
 
 
   });

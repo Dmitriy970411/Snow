@@ -66,7 +66,9 @@ section {
 }
 
 /* base-style-start */
-
+#navToggle.active-toggle  i {
+   background-color: red;
+}
 /* header-start */
 .header-background-style {
    display: flex;
