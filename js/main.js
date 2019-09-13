@@ -91,6 +91,8 @@ $('.post-carousel').slick({
   ]
 });
 
+
+
 $(function () {
   let jsheader = $("#jsheader");
   let header = $("#header");
@@ -111,6 +113,9 @@ $(function () {
   });
   jsheader.addClass("fixed");
 
+  document.body.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+  });
 
   $("[data-scroll]").on("click", function (event) {
     event.preventDefault();
@@ -119,7 +124,7 @@ $(function () {
     let elementOffset = $(elementId).offset().top;
 
     nav.removeClass("show");
-    $("body").removeClass("no-scroll");
+    $("html, body").removeClass("no-scroll");
 
 
     $("html, body").animate({
@@ -130,7 +135,8 @@ $(function () {
   navToggle.on("click", function (event) {
     event.preventDefault();
     nav.toggleClass("show");
-   $("body").toggleClass("no-scroll");
+    $("html, body").toggleClass("no-scroll");
+
 
   });
 
