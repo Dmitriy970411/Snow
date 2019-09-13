@@ -66,9 +66,7 @@ section {
 }
 
 /* base-style-start */
-#navToggle.active-toggle  i {
-   background-color: red;
-}
+
 /* header-start */
 .header-background-style {
    display: flex;
@@ -1195,6 +1193,8 @@ input[type=email] {
       display: inline-block;
       margin: 3px;
       cursor: pointer;
+      position: fixed;
+      right: 10px;
    }
 
    .trigger i {
@@ -1206,10 +1206,13 @@ input[type=email] {
    }
 
    .show {
-      position: absolute;
-      top: 100%;
-      right: 0;
+      position: fixed;
       left: 0;
+      right: 0;
+      bottom: 0;
+      top: -70px;
+      padding-bottom: 70px;
+      transform: translateY(70px);
       display: flex;
       width: 100%;
       flex-direction: column;
@@ -1217,7 +1220,7 @@ input[type=email] {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      padding: 3% 20% 62% 30%;
+      padding: 3% 20% 46% 30%;
    }
 
    .header-color {

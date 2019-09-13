@@ -124,7 +124,7 @@ $(function () {
     let elementOffset = $(elementId).offset().top;
 
     nav.removeClass("show");
-    // $("html, body").removeClass("no-scroll");
+    $("html, body").removeClass("no-scroll");
 
 
     $("html, body").animate({
@@ -137,22 +137,7 @@ $(function () {
   navToggle.on("click", function (event) {
     event.preventDefault();
     $("#nav").toggleClass("show");
-    // $("html, body").toggleClass("no-scroll");
-   
-    if (!$(this).hasClass('active-toggle')) { // если класса нет
-      $(this).addClass('active-toggle')
-      $('body, html').css('display', 'none');
-      $('html, body').animate({
-        scrollTop:0
-    }, 0); // добавляем класс
-
-    } else { // если есть
-      $(this).removeClass('active-toggle'); // убираем класс
-      $('body, html').css('display', 'none');
-      $('body, html').removeAttr( 'style' ); // код для второго клика
-    }
-
-
+    $("html, body").toggleClass("no-scroll");
   });
 
 });
