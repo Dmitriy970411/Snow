@@ -13,6 +13,7 @@ $(document).ready(function () {
       scrollTop: top
     }, 1500);
   });
+
 });
 
 $('.single-item').slick({
@@ -124,20 +125,18 @@ $(function () {
     let elementOffset = $(elementId).offset().top;
 
     nav.removeClass("show");
-    $("html, body").removeClass("no-scroll");
+    $("body").removeClass("no-scroll");
 
 
     $("html, body").animate({
-      scrollTop: elementOffset - 20
+      scrollTop: elementOffset - 100
     }, 700);
   });
-
-  var menu = (".menu");
 
   navToggle.on("click", function (event) {
     event.preventDefault();
     $("#nav").toggleClass("show");
-    $("html, body").toggleClass("no-scroll");
+    $("body").toggleClass("no-scroll");
   });
 
 });
