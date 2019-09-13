@@ -141,14 +141,14 @@ $(function () {
    
     if (!$(this).hasClass('active-toggle')) { // если класса нет
       $(this).addClass('active-toggle')
-      $('body, html').css('overflow', 'hidden');
+      $('body, html').css('display', 'none');
       $('html, body').animate({
         scrollTop:0
     }, 0); // добавляем класс
 
     } else { // если есть
       $(this).removeClass('active-toggle'); // убираем класс
-      $('body, html').css('overflow', ' ');
+      $('body, html').css('display', 'none');
       $('body, html').removeAttr( 'style' ); // код для второго клика
     }
 
