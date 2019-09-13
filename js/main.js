@@ -136,6 +136,20 @@ $(function () {
     event.preventDefault();
     nav.toggleClass("show");
     $("html, body").toggleClass("no-scroll");
+    if (nav === (".show")) {
+      window.addEventListener("scroll", preventMotion, false);
+      window.addEventListener("touchmove", preventMotion, false);
+
+      function preventMotion(event) {
+        window.scrollTo(0, 0);
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    } else {
+      window.addEventListener("scroll", preventMotion, true);
+      window.addEventListener("touchmove", preventMotion, true);
+
+    };
 
 
   });
