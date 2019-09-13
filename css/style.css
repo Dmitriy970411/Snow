@@ -1211,7 +1211,6 @@ input[type=email] {
       right: 0;
       bottom: 0;
       top: -70px;
-      padding-bottom: 70px;
       transform: translateY(70px);
       display: flex;
       width: 100%;
@@ -1220,7 +1219,7 @@ input[type=email] {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      padding: 3% 20% 46% 30%;
+      padding: 3% 20% 29% 30%;
    }
 
    .header-color {
