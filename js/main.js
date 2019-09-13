@@ -134,9 +134,14 @@ $(function () {
 
   navToggle.on("click", function (event) {
     event.preventDefault();
-    nav.toggleClass("show");
+    $("#nav").toggleClass("show");
     $("html, body").toggleClass("no-scroll");
-    if (nav === (".show")) {
+   
+   
+    if (nav + (".show")) {
+      window.addEventListener("scroll", preventMotion, true);
+      window.addEventListener("touchmove", preventMotion, true);
+    } else {
       window.addEventListener("scroll", preventMotion, false);
       window.addEventListener("touchmove", preventMotion, false);
 
@@ -145,9 +150,6 @@ $(function () {
         event.preventDefault();
         event.stopPropagation();
       }
-    } else {
-      window.addEventListener("scroll", preventMotion, true);
-      window.addEventListener("touchmove", preventMotion, true);
 
     };
 
